@@ -1,0 +1,83 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+.background-video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.stopwatch-fullscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.stopwatch-fullscreen h1 {
+  color: #E3FEF7;
+  font-size: 3em;
+}
+
+#display {
+  color: #111;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #003C43;
+  color: #E3FEF7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+#lapTimes {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  color: #111;
+  font-weight: bold;
+}
+
+#lapTimes li {
+  margin-bottom: 5px;
+}
+
+button:hover {
+  background-color: #135D66;
+  transform: scale(1.1);
+  transition: transform 0.3s; 
+}
+button:disabled {
+  background-color: #77B0AA;
+  cursor: not-allowed;
+  transform: none;
+}
